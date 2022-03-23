@@ -35,7 +35,7 @@ namespace PortfolioAPI.Models
         public string? CreatedBy { get; set; } = "Okänd";
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                ApplyFormatInEditMode = true)]
         public DateTime? CreateAt { get; set; } = DateTime.Now;
     }

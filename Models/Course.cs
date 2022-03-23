@@ -12,17 +12,17 @@ namespace PortfolioAPI.Models
         [Required(ErrorMessage ="Kursenamn måste vara med!")]
         public string? Name { get; set; }
 
-        [StringLength(2)]
+        [StringLength(1)]
         [Required(ErrorMessage = "Prograssion måste vara med!")]
         public string? Prograssion { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                ApplyFormatInEditMode = true)]
         public DateTime? Start { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                ApplyFormatInEditMode = true)]
         public DateTime? End { get; set; }
 

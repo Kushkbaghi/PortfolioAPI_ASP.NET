@@ -17,13 +17,13 @@ namespace PortfolioAPI.Models
         public string? Place { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                    ApplyFormatInEditMode = true)]
         public DateTime? Start { get; set; }
 
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                ApplyFormatInEditMode = true)]
         public DateTime? End { get; set; }
 
@@ -31,7 +31,7 @@ namespace PortfolioAPI.Models
 
     
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+        [DisplayFormat(DataFormatString = "{yyyy-MM-dd}",
                ApplyFormatInEditMode = true)]
         public DateTime? CreateAt { get; set; } = DateTime.Now;
     }

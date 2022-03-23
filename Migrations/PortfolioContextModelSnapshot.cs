@@ -47,8 +47,8 @@ namespace PortfolioAPI.Migrations
 
                     b.Property<string>("Prograssion")
                         .IsRequired()
-                        .HasMaxLength(2)
-                        .HasColumnType("nvarchar(2)");
+                        .HasMaxLength(1)
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<DateTime?>("Start")
                         .HasColumnType("datetime2");
