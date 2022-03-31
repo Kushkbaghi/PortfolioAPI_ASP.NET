@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZH//Swgph8IN9lop8Da0TpvcB8TqVY1V2+ciaWiL7uTW6OSnHOxRD3lY3sabI0Qkwi+0xQXgPhMlGQSPUTD7ag==",
+  "dgSpecHash": "4wz/ljCwgE5jYXeejuL2l9gO+RBHhY1nu/a+H8egjYprROj45ArGvzNXJ1r7XoJNxQpKBOq0KxZTl1v1fI+nTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Universitets uppgifter\\Webbutveckling\\Språk\\.NET\\Project\\API\\PortfolioAPI\\PortfolioAPI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Universitets uppgifter\\Webbutveckling\\Språk\\.NET\\Project\\API\\PortfolioAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.13.14\\humanizer.core.2.13.14.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -10,13 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<PortfolioContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("SqlServer")));
 
+builder.Services.AddCors();         //Include Cors to allow access to fetch
 var app = builder.Build();
+
+app.UseCors(options =>              // Access options
+{
+    options.
+    AllowAnyOrigin().
+    AllowAnyMethod().
+    AllowAnyHeader();
+});
 
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

@@ -9,12 +9,16 @@ namespace PortfolioAPI.Models
         public int Id { get; set; }
 
         [StringLength(32)]
-        [Required(ErrorMessage ="Kursenamn måste vara med!")]
+        [Required(ErrorMessage = "Kursenamn måste vara med!")]
         public string? Name { get; set; }
 
         [StringLength(1)]
         [Required(ErrorMessage = "Prograssion måste vara med!")]
         public string? Prograssion { get; set; }
+
+        [StringLength(32)]
+        [Required(ErrorMessage = "Universitetsnamn måste vara med!")]
+        public string? Place { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
@@ -30,6 +34,6 @@ namespace PortfolioAPI.Models
         public string? CreatedBy { get; set; } = "Okänd";
 
         [DataType(DataType.Date)]
-        public DateTime? CreateAt { get; set; } = DateTime.Now;     
+        public DateTime? CreateAt { get; set; } = DateTime.Now;
     }
 }

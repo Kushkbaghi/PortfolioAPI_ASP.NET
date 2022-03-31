@@ -2,19 +2,17 @@
 
 namespace PortfolioAPI.Models
 {
-    // Handle project info 
+    // Handle project info
     public class Project
     {
         [Key]
         public int Id { get; set; }
 
-
         [StringLength(32)]
         [Required(ErrorMessage = "Projektnamn måste vara med!")]
         public string? Name { get; set; }
 
-
-        [StringLength(250)]
+        [StringLength(500)]
         [Required(ErrorMessage = "Beskrivning måste vara med!")]
         public string? Description { get; set; }
 
@@ -22,14 +20,8 @@ namespace PortfolioAPI.Models
         [Required(ErrorMessage = "Projektlänk måste vara med!")]
         public string? Url { get; set; }
 
-        [StringLength(32)]
+        [StringLength(225)]
         public string? ImageName { get; set; }
-
-        [StringLength(64)]
-        public string? ImageLink { get; set; }
-
-        [StringLength(64)]
-        public string? Tags { get; set; }
 
         [StringLength(32)]
         public string? CreatedBy { get; set; } = "Okänd";

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PortfolioAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddBD : Migration
+    public partial class Add : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,6 +19,7 @@ namespace PortfolioAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
                     Prograssion = table.Column<string>(type: "nvarchar(1)", maxLength: 1, nullable: false),
+                    Place = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
                     Start = table.Column<DateTime>(type: "datetime2", nullable: true),
                     End = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
@@ -54,11 +55,9 @@ namespace PortfolioAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
                     Url = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
-                    ImageName = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
-                    ImageLink = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: true),
-                    Tags = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: true),
+                    ImageName = table.Column<string>(type: "nvarchar(225)", maxLength: 225, nullable: true),
                     CreatedBy = table.Column<string>(type: "nvarchar(32)", maxLength: 32, nullable: true),
                     CreateAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },

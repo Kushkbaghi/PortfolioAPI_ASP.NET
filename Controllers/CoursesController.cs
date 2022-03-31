@@ -1,8 +1,10 @@
 ﻿#nullable disable
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,7 @@ namespace PortfolioAPI.Controllers
     // Router which may use in URL
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors]
     public class CoursesController : ControllerBase
     {
         private readonly PortfolioContext _context;
@@ -45,7 +48,6 @@ namespace PortfolioAPI.Controllers
         }
 
         // PUT: api/Courses/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCourse(int id, Course course)
         {
@@ -75,8 +77,7 @@ namespace PortfolioAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Courses
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // POST: api/Courses To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
